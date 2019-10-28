@@ -8,9 +8,10 @@ public class UniversityManager {
         String studentName;
         String studentEmail;
 
-        public Student (int id, String name, String email){
+        public Student (int id, String name, String email) throws  Exception{
+            if (!email.matches("*@*[^'.']")) throw new Exception();
             studentID = id;
-            studentName = Name;
+            studentName = name;
             studentEmail = email;
         }
 
