@@ -17,7 +17,7 @@ public class UniversityManager {
     }
 
     class Course {
-      
+
         int code;
         String courseName;
         String coordinator;
@@ -27,6 +27,5 @@ public class UniversityManager {
             courseName = name;
             coordinator = coord;
         }
-
     }
 }
