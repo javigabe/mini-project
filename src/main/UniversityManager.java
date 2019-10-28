@@ -17,7 +17,20 @@ public class UniversityManager {
     }
 
     class Course {
+<<<<<<< HEAD
 
 
+=======
+        int code;
+        String courseName;
+        String coordinator;
+
+        public Course(int cod, String name, String coord) {
+            code = cod;
+            courseName = name;
+            coordinator = coord;
+        }
+        
+>>>>>>> 7e8cea8beda2e809bbc925286d6933edce4124fc
     }
 }
