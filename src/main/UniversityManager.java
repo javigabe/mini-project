@@ -4,14 +4,14 @@ public class UniversityManager {
 
     class Student {
 
-        int id;
-        String name;
-        String email;
+        int studentID;
+        String studentName;
+        String studentEmail;
 
-        public Student (int i, String n, String e){
-            id=i;
-            name=n;
-            email=e;
+        public Student (int id, String name, String email){
+            studentID = id;
+            studentName = Name;
+            studentEmail = email;
         }
 
     }
