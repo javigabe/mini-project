@@ -13,14 +13,11 @@ public class UniversityManager {
             name=n;
             email=e;
         }
-        
+
     }
 
     class Course {
-<<<<<<< HEAD
-
-
-=======
+      
         int code;
         String courseName;
         String coordinator;
@@ -30,7 +27,6 @@ public class UniversityManager {
             courseName = name;
             coordinator = coord;
         }
-        
->>>>>>> 7e8cea8beda2e809bbc925286d6933edce4124fc
+
     }
 }
