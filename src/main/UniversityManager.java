@@ -1,9 +1,10 @@
 package main;
+
 import java.util.Set;
 
 public class UniversityManager {
     Set<Student> studentSet;
-
+    Set<Course> courseSet;
 
     class Student {
 
@@ -33,6 +34,7 @@ public class UniversityManager {
             code = cod;
             courseName = name;
             coordinator = coord;
+            courseSet.add(this);
         }
     }
 }
