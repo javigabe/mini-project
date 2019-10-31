@@ -19,6 +19,11 @@ public class UniversityManager {
             studentEmail = email;
             studentSet.add(this);
         }
+
+        public void addCourse(Course course){
+          course.studentsEnrrolled.add(this);
+          course.students++;
+        }
     }
 
     class Course {
@@ -26,7 +31,8 @@ public class UniversityManager {
         int code;
         String courseName;
         String coordinator;
-
+        int students = 0;
+        Set<Student> studentsEnrrolled;
 
         public Course(int cod, String name, String coord) {
             code = cod;
