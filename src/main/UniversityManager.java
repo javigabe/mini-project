@@ -19,9 +19,6 @@ public class UniversityManager {
             studentEmail = email;
             studentSet.add(this);
         }
-
-
-
     }
 
     class Course {
