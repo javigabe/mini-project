@@ -20,10 +20,16 @@ public class UniversityManager {
             studentSet.add(this);
         }
 
-        public void addCourse(Course course){
-          course.studentsEnrrolled.add(this);
-          course.students++;
+        public void addCourse(Course course) throws Exception{
+          if (course.students < 50){
+            course.studentsEnrrolled.add(this);
+            course.students++;
+          }
+          else {
+            throw new Exception();
+          }
         }
+
     }
 
     class Course {
