@@ -1,5 +1,6 @@
 package main;
 
+import java.rmi.server.ExportException;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,16 +23,23 @@ public class UniversityManager {
 
         if (myCourse == null) throw new Exception();
 
-        myCourse.sortStudents();
+        sort(myCourse.studentsEnrrolled, studComparator);
 
         return myCourse.studentsEnrrolled;
     }
 
-    public ArrayList<Student> allUsers () {
+    public ArrayList<Student> allUsersSorted () {
         ArrayList<Student> studentArrayList = new ArrayList(studentSet);
-
-
+        sort(studentArrayList, studComparator);
+        return studentArrayList;
     }
+
+    public ArrayList<Course> allCoursesSorted() {
+        ArrayList<Course> courseArrayList = new ArrayList(courseSet);
+        sort(courseArrayList, courseComparator);
+        return courseArrayList;
+    }
+
 
     class Student {
 
@@ -48,11 +56,21 @@ public class UniversityManager {
         }
 
         public void addCourse(Course course) throws Exception {
+            if (!courseSet. contains(course)) throw new Exception();
+
             if (course.students < 50) {
-                course.studentsEnrrolled.add(this);
-                course.students++;
+                if (!course.studentsEnrrolled.contains(this)) {
+                    course.studentsEnrrolled.add(this);
+                    course.students++;
+                }
+                else throw new Exception();
             }
             else throw new Exception();
+        }
+
+        public void cancelCourse(Course course) {
+            course.studentsEnrrolled.remove(this);
+            course.students--;
         }
     }
 
@@ -68,17 +86,8 @@ public class UniversityManager {
             code = cod;
             courseName = name;
             coordinator = coord;
+            courseSet.add(this);
         }
-
-        private void sortStudents() {
-            Collections.sort(studentsEnrrolled, codComparator);
-        }
-
-        private Comparator<Student> codComparator = new Comparator<Student>() {
-            public int compare(Student s1, Student s2) {
-                return s1.studentID-s2.studentID;
-            }
-        };
 
         private void cancel() {
             studentsEnrrolled = new ArrayList<>();
@@ -86,9 +95,24 @@ public class UniversityManager {
         }
     }
 
-    private void sortStudents (ArrayList<Student> students) {
-        
+
+    // Auxiliar methods
+
+    private void sort(ArrayList list, Comparator comp) {
+        Collections.sort(list, comp);
     }
+
+    private Comparator<Student> studComparator = new Comparator<Student>() {
+        public int compare(Student s1, Student s2) {
+            return s1.studentID-s2.studentID;
+        }
+    };
+
+    private Comparator<Course> courseComparator = new Comparator<Course>() {
+        public int compare(Course s1, Course s2) {
+            return s1.code-s2.code;
+        }
+    };
 
 
 
