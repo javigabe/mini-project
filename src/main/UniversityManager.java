@@ -1,6 +1,9 @@
 package main;
+import java.util.Set;
 
 public class UniversityManager {
+    Set<Student> studentSet;
+
 
     class Student {
 
@@ -13,7 +16,10 @@ public class UniversityManager {
             studentID = id;
             studentName = name;
             studentEmail = email;
+            studentSet.add(this);
         }
+
+
 
     }
 
