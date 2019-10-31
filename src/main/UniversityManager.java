@@ -28,6 +28,10 @@ public class UniversityManager {
           else {
             throw new Exception();
           }
+
+          public void addCourse(Course course){
+          course.studentsEnrrolled.add(this);
+          course.students++;
         }
 
     }
