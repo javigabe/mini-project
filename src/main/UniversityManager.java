@@ -27,6 +27,7 @@ public class UniversityManager {
         String courseName;
         String coordinator;
 
+
         public Course(int cod, String name, String coord) {
             code = cod;
             courseName = name;
