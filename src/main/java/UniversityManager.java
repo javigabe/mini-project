@@ -1,4 +1,4 @@
-package main;
+package main.java;
 
 import java.rmi.server.ExportException;
 import java.util.Set;
