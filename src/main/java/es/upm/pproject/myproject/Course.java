@@ -2,12 +2,12 @@ package es.upm.pproject.myproject;
 
 import java.util.ArrayList;
 
-class Course {
+public class Course {
 
     Integer code;
     String courseName;
     String coordinator;
-    int students = 0;
+    int students;
     ArrayList<Student> studentsEnrrolled = new ArrayList<Student>();
 
     public Course(Integer cod, String name, String coord) throws Exception {
@@ -16,6 +16,7 @@ class Course {
         code = cod;
         courseName = name;
         coordinator = coord;
+        students = 0;
     }
 
     private void cancel() {

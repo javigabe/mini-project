@@ -1,6 +1,6 @@
 package es.upm.pproject.myproject;
 
-class Student {
+public class Student {
 
     int studentID;
     String studentName;
