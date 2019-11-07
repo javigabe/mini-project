@@ -16,23 +16,34 @@ public class AppTest {
      * @param testName name of the test case
      */
 	private UniversityManager test;
-	
+
 	@BeforeEach
     public void testApp() {
 		test = new UniversityManager();
 	}
-	
+
 	@Test
 	public void test1() {
 		Assertions.assertEquals(new HashSet<>(), test.courseSet);
 
 	}
-	
+
 	@Test
 	public void test2(){
 		Assertions.assertEquals(new HashSet<>(), test.studentSet);
 	}
-	
+
+	@Test
+	public void test3() throws Exception {
+		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email.");});
+	}
+
+	@Test
+	public void test4() {
+		Assertions.assertThrows(Exception.class, () -> new Student(0, "", "paco@email.com"));
+	}
+
+
 /*	@Test
 	public void test200() throws Exception {
 		Course course = new Course(5, "lengua", "Guillermo");
@@ -46,16 +57,6 @@ public class AppTest {
 
 		Assertions.assertThrows(Exception.class, () -> {test.addStudentToCourse(stud, course);});
 	}*/
-
-	@Test
-	public void test3() throws Exception {
-		//Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email.");});
-	}
-
-	@Test
-	public void test4() {
-		Assertions.assertThrows(Exception.class, () -> new Student(0, "", "paco@email.com"));
-	}
 
 
 }
