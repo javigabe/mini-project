@@ -10,6 +10,18 @@ public class UniversityManager {
     Set<Student> studentSet;
     Set<Course> courseSet;
 
+    // Method to register a course to the UniversityManager
+    public void registerCourse(Course course) throws Exception {
+        courseSet.add(course);
+    }
+
+
+    // Method to register a student to the UniversityManager
+    public void registerStudent(Student student) throws Exception {
+        studentSet.add(student);
+    }
+
+
     // Method that returns all the students in a course sorted
     public ArrayList<Student> matriculatedStudents(Integer code) throws Exception {
         Course myCourse = null;
@@ -40,16 +52,6 @@ public class UniversityManager {
         return courseArrayList;
     }
 
-
-    // Method to register a course
-    public void registerCourse(Course course) throws Exception {
-        courseSet.add(course);
-    }
-
-    // Method to register a student
-    public void registerStudent(Student student) throws Exception {
-        studentSet.add(student);
-    }
 
     public void addStudentToCourse(Student student, Course course) throws Exception {
         if (!courseSet.contains(course) || !studentSet.contains(student)) throw new Exception();

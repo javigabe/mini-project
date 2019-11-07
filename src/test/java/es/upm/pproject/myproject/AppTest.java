@@ -33,43 +33,25 @@ public class AppTest {
 	}
 	
 	@Test
-	public void test3() throws Exception {
-		/*test.registerCourse(1, "lengua", "pepe");
-
-		UniversityManager.Course course = test.courseSet.iterator().next();
-
+	public void test200() throws Exception {
+		Course course = new Course(5, "lengua", "Guillermo");
+		test.registerCourse(course);
 		for (int i = 0; i < 50; i++) {
-			test.registerStudent(i, "pepe", "@");
+			Student stud = new Student(i, "paco", "paco@email.com");
+			test.registerStudent(stud);
+			test.addStudentToCourse(stud, course);
 		}
-
-
-		for (UniversityManager.Student student: test.studentSet) {
-			student.addCourse(course);
-		}
-
-		UniversityManager.Student student = null;
-
-		test.registerStudent(52, "paco", "@");
-		Iterator it = test.studentSet.iterator();
-
-		while (it.hasNext()) {
-			 student = (UniversityManager.Student) it.next();
-		}
-
-		UniversityManager.Student finalStudent = student;
-		Assertions.assertThrows(Exception.class, () -> {
-			finalStudent.addCourse(course);});*/
-
+		Assertions.assertThrows(Exception.class, () -> {test.addStudentToCourse(new Student(54, "explota", "explota@email.com"), course);});
 	}
 
 	@Test
-	public void test4() throws Exception {
+	public void test3() throws Exception {
 		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email.");});
 	}
 
 	@Test
-	public void test5() {
-		//Assertions.assertThrows(Exception.class, () -> test.registerStudent(0, "pepe", "af"));
+	public void test4() {
+		Assertions.assertThrows(Exception.class, () -> new Student(0, "", "paco@email.com"));
 	}
 
 
