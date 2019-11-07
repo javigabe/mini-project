@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: es.upm.pproject.myproject.AppTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 1.494 s <<< FAILURE! - in es.upm.pproject.myproject.AppTest
-test200  Time elapsed: 1.003 s  <<< ERROR!
+Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.076 s <<< FAILURE! - in es.upm.pproject.myproject.AppTest
+test200  Time elapsed: 0.01 s  <<< ERROR!
 java.lang.Exception
 	at es.upm.pproject.myproject.AppTest.test200(AppTest.java:40)
 
-test1  Time elapsed: 0.223 s  <<< FAILURE!
+test1  Time elapsed: 0.036 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <null> but was: <[]>
 	at es.upm.pproject.myproject.AppTest.test1(AppTest.java:26)
 
-test2  Time elapsed: 0.006 s  <<< FAILURE!
+test2  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <null> but was: <[]>
 	at es.upm.pproject.myproject.AppTest.test2(AppTest.java:32)
 
