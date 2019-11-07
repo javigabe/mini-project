@@ -8,7 +8,7 @@ class Student {
 
     public Student(Integer id, String name, String email) throws Exception {
         if (name.length() == 0 || id == null) throw new Exception();
-        if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) throw new Exception();
+        if (!email.matches("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+(?:\\\\.[a-zA-Z0-9_!#$%&’*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*$")) throw new Exception();
 
         studentID = id;
         studentName = name;

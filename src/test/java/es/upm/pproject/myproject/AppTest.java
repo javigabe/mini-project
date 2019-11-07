@@ -64,7 +64,7 @@ public class AppTest {
 
 	@Test
 	public void test4() throws Exception {
-		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "pacoemail");});
+		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email.");});
 	}
 
 	@Test
