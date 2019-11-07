@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.325" tests="4" errors="0" skipped="0" failures="0">
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.08" tests="4" errors="0" skipped="0" failures="0">
->>>>>>> 8719020b7576e1f7eec50e43beb93fdab543dea8
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.078" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -21,16 +17,10 @@
     <property name="os.name" value="Mac OS X"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-<<<<<<< HEAD
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\Alvaro GG\AppData\Local\Temp\surefire8842974623420760389 2019-11-07T23-21-14_859-jvmRun1 surefire7221582041252862854tmp surefire_08310079483107792948tmp"/>
-    <property name="surefire.test.class.path" value="C:\Users\Alvaro GG\mini-proyect\target\test-classes;C:\Users\Alvaro GG\mini-proyect\target\classes;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.2.0\junit-jupiter-engine-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\platform\junit-platform-engine\1.2.0\junit-platform-engine-1.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\platform\junit-platform-commons\1.2.0\junit-platform-commons-1.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\opentest4j\opentest4j\1.1.0\opentest4j-1.1.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.2.0\junit-jupiter-api-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.2.0\junit-jupiter-params-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Alvaro GG\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;"/>
-=======
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/surefire 2019-11-07T23-53-02_048-jvmRun1 surefire829648915740699357tmp surefire_07923885833906376557tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/surefire 2019-11-08T00-08-33_942-jvmRun1 surefire2171058836202007638tmp surefire_04764573070488438988tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="surefire.test.class.path" value="/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/test-classes:/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/classes:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar:/Users/javigabe/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/Users/javigabe/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.2.0/junit-jupiter-params-5.2.0.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:"/>
->>>>>>> 8719020b7576e1f7eec50e43beb93fdab543dea8
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/javigabe"/>
     <property name="user.language" value="en"/>
@@ -71,15 +61,8 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-<<<<<<< HEAD
-  <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
-  <testcase name="test2" classname="es.upm.pproject.myproject.AppTest" time="0"/>
-  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0"/>
-  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0"/>
-=======
-  <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.039"/>
+  <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.049"/>
   <testcase name="test2" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
-  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
-  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.005"/>
->>>>>>> 8719020b7576e1f7eec50e43beb93fdab543dea8
+  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.006"/>
 </testsuite>

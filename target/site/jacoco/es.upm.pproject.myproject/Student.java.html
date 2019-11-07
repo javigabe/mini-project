@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Student.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Mini-project Programming Project</a> &gt; <a href="index.source.html" class="el_package">es.upm.pproject.myproject</a> &gt; <span class="el_source">Student.java</span></div><h1>Student.java</h1><pre class="source lang-java linenums">package es.upm.pproject.myproject;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Student.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Mini-project Programming Project</a> &gt; <a href="index.source.html" class="el_package">es.upm.pproject.myproject</a> &gt; <span class="el_source">Student.java</span></div><h1>Student.java</h1><pre class="source lang-java linenums">package es.upm.pproject.myproject;
 
 public class Student {
 
@@ -7,17 +7,29 @@ public class Student {
     String studentEmail;
 
 <span class="fc" id="L9">    public Student(Integer id, String name, String email) throws Exception {</span>
-<span class="pc bpc" id="L10" title="1 of 4 branches missed.">        if (name.length() == 0 || id == null) throw new Exception();</span>
-<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if (!email.matches(&quot;^[a-zA-Z0-9_!#$%&amp;’*+/=?`{|}~^-]+(?:\\\\.[a-zA-Z0-9_!#$%&amp;’*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\\\.[a-zA-Z0-9-]+)*$&quot;)) throw new Exception();</span>
+<span class="pc bpc" id="L10" title="3 of 4 branches missed.">        if (name.length() == 0 || id == null) throw new Exception();</span>
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if (check(email)) throw new Exception();</span>
 
 <span class="nc" id="L13">        studentID = id;</span>
 <span class="nc" id="L14">        studentName = name;</span>
 <span class="nc" id="L15">        studentEmail = email;</span>
 <span class="nc" id="L16">    }</span>
 
-    public void cancelCourse(Course course) {
+    public boolean cancelCourse(Course course) {
 <span class="nc" id="L19">        course.studentsEnrrolled.remove(this);</span>
 <span class="nc" id="L20">        course.students--;</span>
-<span class="nc" id="L21">    }</span>
+<span class="nc" id="L21">        return true;</span>
+    }
+
+    private boolean check(String email) {
+<span class="nc" id="L25">		boolean containsArr = false;</span>
+
+<span class="nc bnc" id="L27" title="All 2 branches missed.">		for(int n = 0; n &lt; email.length(); n++) {</span>
+<span class="nc" id="L28">			char c = email.charAt(n);</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">			if(c == '@')</span>
+<span class="nc" id="L30">				containsArr = true;</span>
+		}
+<span class="nc bnc" id="L32" title="All 4 branches missed.">		return containsArr &amp;&amp; (email.charAt(email.length()-1) != '.');</span>
+	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

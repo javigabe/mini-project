@@ -11,7 +11,7 @@ public class Course {
     ArrayList<Student> studentsEnrrolled = new ArrayList<>();
 
     public Course(Integer cod, String name, String coord) throws Exception {
-        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new Exception();
+        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();
 
         code = cod;
         courseName = name;
