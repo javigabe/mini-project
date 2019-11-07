@@ -42,74 +42,27 @@ public class UniversityManager {
 
 
     // Method to register a course
-    public void registerCourse(int cod, String name, String coord) throws Exception {
-        new Course(cod, name, coord);
+    public void registerCourse(Course course) throws Exception {
+        courseSet.add(course);
     }
 
     // Method to register a student
-    public void registerStudent(int id, String name, String email) throws Exception {
-        new Student(id, name, email);
+    public void registerStudent(Student student) throws Exception {
+        studentSet.add(student);
     }
 
+    public void addStudentToCourse(Student student, Course course) throws Exception {
+        if (!courseSet.contains(course) || !studentSet.contains(student)) throw new Exception();
 
-    // Student class with its own methods
-    class Student {
-
-        int studentID;
-        String studentName;
-        String studentEmail;
-
-        public Student(Integer id, String name, String email) throws Exception {
-            if (name.length() == 0 || id == null) throw new Exception();
-            //if (!email.matches("*@*[^'.']")) throw new Exception();
-
-            studentID = id;
-            studentName = name;
-            studentEmail = email;
-            studentSet.add(this);
-        }
-
-        public void addCourse(Course course) throws Exception {
-            if (!courseSet. contains(course)) throw new Exception();
-
-            if (course.students < 50) {
-                if (!course.studentsEnrrolled.contains(this)) {
-                    course.studentsEnrrolled.add(this);
-                    course.students++;
-                }
-                else throw new Exception();
+        if (course.students < 50) {
+            if (!course.studentsEnrrolled.contains(student)) {
+                course.studentsEnrrolled.add(student);
+                course.students++;
             }
             else throw new Exception();
         }
+        else throw new Exception();
 
-        public void cancelCourse(Course course) {
-            course.studentsEnrrolled.remove(this);
-            course.students--;
-        }
-    }
-
-    // Course class with its own methods
-    class Course {
-
-        Integer code;
-        String courseName;
-        String coordinator;
-        int students = 0;
-        ArrayList<Student> studentsEnrrolled = new ArrayList<Student>();
-
-        public Course(Integer cod, String name, String coord) throws Exception {
-            if (name.length() == 0 || coord.length() == 0 || cod == null) throw new Exception();
-
-            code = cod;
-            courseName = name;
-            coordinator = coord;
-            courseSet.add(this);
-        }
-
-        private void cancel() {
-            studentsEnrrolled = new ArrayList<Student>();
-            students = 0;
-        }
     }
 
 

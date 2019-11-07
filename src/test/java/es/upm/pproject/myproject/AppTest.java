@@ -64,6 +64,13 @@ public class AppTest {
 
 	@Test
 	public void test4() throws Exception {
-		Assertions.assertThrows(Exception.class, () -> test.registerStudent(0,"", "paco@email"));
+		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email");});
 	}
+
+	@Test
+	public void test5() {
+		//Assertions.assertThrows(Exception.class, () -> test.registerStudent(0, "pepe", "af"));
+	}
+
+
 }
