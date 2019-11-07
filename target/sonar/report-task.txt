@@ -2,5 +2,10 @@ projectKey=es.upm.pproject:myproject:mini-project-170071
 serverUrl=http://costa.ls.fi.upm.es:9000/sonar
 serverVersion=6.5.0.27846
 dashboardUrl=http://costa.ls.fi.upm.es:9000/sonar/dashboard/index/es.upm.pproject:myproject:mini-project-170071
+<<<<<<< HEAD
 ceTaskId=AW5IGX33C4VIHF7HOehW
 ceTaskUrl=http://costa.ls.fi.upm.es:9000/sonar/api/ce/task?id=AW5IGX33C4VIHF7HOehW
+=======
+ceTaskId=AW5IIKZHC4VIHF7HOehY
+ceTaskUrl=http://costa.ls.fi.upm.es:9000/sonar/api/ce/task?id=AW5IIKZHC4VIHF7HOehY
+>>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369

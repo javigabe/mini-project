@@ -10,21 +10,21 @@ public class UniversityManager {
     Set<Course> courseSet = new HashSet<>();
 
     // Method to register a course to the UniversityManager
-    public void registerCourse(Course course) throws Exception {
-        if (course == null) throw new Exception();
+    public void registerCourse(Course course) throws CourseNotFoundException {
+        if (course == null) throw new CourseNotFoundException();
         else courseSet.add(course);
     }
 
 
     // Method to register a student to the UniversityManager
-    public void registerStudent(Student student) throws Exception {
+    public void registerStudent(Student student) throws StudentNotFoundException {
       if (student == null) throw new Exception();
       else studentSet.add(student);
     }
 
 
     // Method that returns all the students in a course sorted
-    public ArrayList<Student> matriculatedStudents(Integer code) throws Exception {
+    public ArrayList<Student> matriculatedStudents(Integer code) throws CourseNotFoundException {
         Course myCourse = null;
 
         // Pick the course with code "code"
@@ -34,7 +34,7 @@ public class UniversityManager {
                 break;
             }
         }
-        if (myCourse == null) throw new Exception();
+        if (myCourse == null) throw new CourseNotFoundException();
         sort(myCourse.studentsEnrrolled, studComparator);
         return myCourse.studentsEnrrolled;
     }
@@ -55,7 +55,8 @@ public class UniversityManager {
 
 
     public void addStudentToCourse(Student student, Course course) throws Exception {
-        if (!courseSet.contains(course) || !studentSet.contains(student)) throw new Exception();
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+        if (!studentSet.contains(student)) throw new StudentNotFoundException();
 
         if (course.students < 50) {
             if (!course.studentsEnrrolled.contains(student)) {

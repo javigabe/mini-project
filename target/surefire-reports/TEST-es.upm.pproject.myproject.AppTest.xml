@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.095" tests="4" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.078" tests="4" errors="0" skipped="0" failures="0">
+>>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,9 +21,16 @@
     <property name="os.name" value="Windows 10"/>
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+<<<<<<< HEAD
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_161\jre\bin"/>
     <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\Alvaro GG\AppData\Local\Temp\surefire8573172742628966088 2019-11-08T00-00-43_136-jvmRun1 surefire4905188500790929807tmp surefire_04385018142427206534tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\Alvaro GG\mini-proyect\target\test-classes;C:\Users\Alvaro GG\mini-proyect\target\classes;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.2.0\junit-jupiter-engine-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\platform\junit-platform-engine\1.2.0\junit-platform-engine-1.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\platform\junit-platform-commons\1.2.0\junit-platform-commons-1.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\opentest4j\opentest4j\1.1.0\opentest4j-1.1.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.2.0\junit-jupiter-api-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.2.0\junit-jupiter-params-5.2.0.jar;C:\Users\Alvaro GG\.m2\repository\org\apache\logging\log4j\log4j-core\2.8.2\log4j-core-2.8.2.jar;C:\Users\Alvaro GG\.m2\repository\org\apache\logging\log4j\log4j-api\2.8.2\log4j-api-2.8.2.jar;"/>
+=======
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/surefire 2019-11-08T00-08-33_942-jvmRun1 surefire2171058836202007638tmp surefire_04764573070488438988tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="surefire.test.class.path" value="/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/test-classes:/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/classes:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar:/Users/javigabe/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/Users/javigabe/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.2.0/junit-jupiter-params-5.2.0.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:"/>
+>>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Alvaro GG"/>
     <property name="user.language" value="es"/>
@@ -59,8 +70,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
+<<<<<<< HEAD
   <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.041"/>
   <testcase name="test2" classname="es.upm.pproject.myproject.AppTest" time="0"/>
   <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0"/>
   <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+=======
+  <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.049"/>
+  <testcase name="test2" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
+  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.006"/>
+>>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369
 </testsuite>

@@ -6,9 +6,9 @@ public class Student {
     String studentName;
     String studentEmail;
 
-    public Student(Integer id, String name, String email) throws Exception {
-        if (name.length() == 0 || id == null) throw new Exception();
-        if (check(email)) throw new Exception();
+    public Student(Integer id, String name, String email) throws InvalidEmailException, DataNotFilledException {
+        if (name.length() == 0 || id == null) throw new DataNotFilledException();
+        if (!check(email)) throw new InvalidEmailException();
 
         studentID = id;
         studentName = name;

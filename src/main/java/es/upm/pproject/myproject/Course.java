@@ -8,10 +8,10 @@ public class Course {
     String courseName;
     String coordinator;
     int students;
-    ArrayList<Student> studentsEnrrolled = new ArrayList<Student>();
+    ArrayList<Student> studentsEnrrolled = new ArrayList<>();
 
     public Course(Integer cod, String name, String coord) throws Exception {
-        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new Exception();
+        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();
 
         code = cod;
         courseName = name;
@@ -20,7 +20,7 @@ public class Course {
     }
 
     private boolean cancel() {
-        studentsEnrrolled = new ArrayList<Student>();
+        studentsEnrrolled = new ArrayList<>();
         students = 0;
         return true;
     }
