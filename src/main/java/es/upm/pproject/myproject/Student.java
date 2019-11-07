@@ -20,12 +20,12 @@ public class Student {
         course.students--;
         return true;
     }
-    
+
     private boolean check(String email) {
 		boolean containsArr = false;
-		
-		for(int n = 0; n < email.length(); n++) { 
-			char c = email.charAt(n); 
+
+		for(int n = 0; n < email.length(); n++) {
+			char c = email.charAt(n);
 			if(c == '@')
 				containsArr = true;
 		}
