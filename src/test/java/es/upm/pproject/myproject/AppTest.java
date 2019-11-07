@@ -2,6 +2,7 @@ package es.upm.pproject.myproject;
 
 import org.junit.jupiter.api.*;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -23,13 +24,13 @@ public class AppTest {
 	
 	@Test
 	public void test1() {
-		Assertions.assertEquals(null, test.courseSet);
+		Assertions.assertEquals(new HashSet<>(), test.courseSet);
 
 	}
 	
 	@Test
 	public void test2(){
-		Assertions.assertEquals(null, test.studentSet);
+		Assertions.assertEquals(new HashSet<>(), test.studentSet);
 	}
 	
 //	@Test

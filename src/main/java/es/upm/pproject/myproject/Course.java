@@ -2,7 +2,7 @@ package es.upm.pproject.myproject;
 
 import java.util.ArrayList;
 
-class Course {
+public class Course {
 
     Integer code;
     String courseName;
