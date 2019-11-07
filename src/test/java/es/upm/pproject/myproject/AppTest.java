@@ -35,14 +35,27 @@ public class AppTest {
 
 	@Test
 	public void test3() throws Exception {
-		Assertions.assertThrows(Exception.class, () -> {new Student(0,"javi", "paco@email.");});
+		Assertions.assertThrows(InvalidEmailException.class, () -> {new Student(0,"Javi", "jaco@email.");});
 	}
 
 	@Test
 	public void test4() {
-		Assertions.assertThrows(Exception.class, () -> new Student(0, "", "paco@email.com"));
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Student(0, "", "paco@email.com"));
 	}
 
+	@Test
+	public void test5() {
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Student(null, "Alvaro", "alvaro@email.es"));
+	}
+	
+	@Test
+	public void test6() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
+		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
+		test.registerStudent(student);
+		Course course = new Course(21, "programming_project", "Guillermo");
+		Assertions.assertThrows(CourseNotFoundException.class, () -> test.addStudentToCourse(student, course));
+	}
+	
 
 /*	@Test
 	public void test200() throws Exception {

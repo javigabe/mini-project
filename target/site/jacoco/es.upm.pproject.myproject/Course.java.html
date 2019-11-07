@@ -8,16 +8,16 @@ public class Course {
     String courseName;
     String coordinator;
     int students;
-<span class="nc" id="L11">    ArrayList&lt;Student&gt; studentsEnrrolled = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">    ArrayList&lt;Student&gt; studentsEnrrolled = new ArrayList&lt;&gt;();</span>
 
-<span class="nc" id="L13">    public Course(Integer cod, String name, String coord) throws DataNotFilledException {</span>
-<span class="nc bnc" id="L14" title="All 6 branches missed.">        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();</span>
+<span class="fc" id="L13">    public Course(Integer cod, String name, String coord) throws DataNotFilledException {</span>
+<span class="pc bpc" id="L14" title="3 of 6 branches missed.">        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();</span>
 
-<span class="nc" id="L16">        code = cod;</span>
-<span class="nc" id="L17">        courseName = name;</span>
-<span class="nc" id="L18">        coordinator = coord;</span>
-<span class="nc" id="L19">        students = 0;</span>
-<span class="nc" id="L20">    }</span>
+<span class="fc" id="L16">        code = cod;</span>
+<span class="fc" id="L17">        courseName = name;</span>
+<span class="fc" id="L18">        coordinator = coord;</span>
+<span class="fc" id="L19">        students = 0;</span>
+<span class="fc" id="L20">    }</span>
 
     private boolean cancel() {
 <span class="nc" id="L23">        studentsEnrrolled = new ArrayList&lt;&gt;();</span>
