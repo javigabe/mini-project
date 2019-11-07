@@ -24,7 +24,7 @@ public class UniversityManager {
 
 
     // Method that returns all the students in a course sorted
-    public ArrayList<Student> matriculatedStudents(Integer code) throws CourseNotFoundException {
+    public List<Student> matriculatedStudents(Integer code) throws CourseNotFoundException {
         Course myCourse = null;
 
         // Pick the course with code "code"
@@ -40,21 +40,21 @@ public class UniversityManager {
     }
 
     // Method that return all the students sorted by a comparator
-    public ArrayList<Student> allUsersSorted () {
-        ArrayList<Student> studentArrayList = new ArrayList(studentSet);
+    public List<Student> allUsersSorted () {
+        ArrayList<Student> studentArrayList = new ArrayList<>(studentSet);
         sort(studentArrayList, studComparator);
         return studentArrayList;
     }
 
     // Method that return all the courses sorted by a comparator
-    public ArrayList<Course> allCoursesSorted() {
-        ArrayList<Course> courseArrayList = new ArrayList(courseSet);
+    public List<Course> allCoursesSorted() {
+        ArrayList<Course> courseArrayList = new ArrayList<>(courseSet);
         sort(courseArrayList, courseComparator);
         return courseArrayList;
     }
 
 
-    public void addStudentToCourse(Student student, Course course) throws Exception {
+    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
         if (!studentSet.contains(student)) throw new StudentNotFoundException();
 
@@ -65,7 +65,7 @@ public class UniversityManager {
             }
             else throw new Exception();
         }
-        else throw new Exception();
+        else throw new CourseFullException();
 
     }
 
