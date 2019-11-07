@@ -6,9 +6,11 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class UniversityManager {
+    // Manager for a university
     Set<Student> studentSet;
     Set<Course> courseSet;
 
+    // Method that returns all the students in a course sorted
     public ArrayList<Student> matriculatedStudents(Integer code) throws Exception {
         Course myCourse = null;
 
@@ -19,20 +21,19 @@ public class UniversityManager {
                 break;
             }
         }
-
         if (myCourse == null) throw new Exception();
-
         sort(myCourse.studentsEnrrolled, studComparator);
-
         return myCourse.studentsEnrrolled;
     }
 
+    // Method that return all the students sorted by a comparator
     public ArrayList<Student> allUsersSorted () {
         ArrayList<Student> studentArrayList = new ArrayList(studentSet);
         sort(studentArrayList, studComparator);
         return studentArrayList;
     }
 
+    // Method that return all the courses sorted by a comparator
     public ArrayList<Course> allCoursesSorted() {
         ArrayList<Course> courseArrayList = new ArrayList(courseSet);
         sort(courseArrayList, courseComparator);
@@ -40,6 +41,18 @@ public class UniversityManager {
     }
 
 
+    // Method to register a course
+    public void registerCourse(int cod, String name, String coord) {
+        new Course(cod, name, coord);
+    }
+
+    // Method to register a student
+    public void registerStudent(int id, String name, String email) throws Exception {
+        new Student(id, name, email);
+    }
+
+
+    // Student class with its own methods
     class Student {
 
         int studentID;
@@ -73,6 +86,7 @@ public class UniversityManager {
         }
     }
 
+    // Course class with its own methods
     class Course {
 
         Integer code;
