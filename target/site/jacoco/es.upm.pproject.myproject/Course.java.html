@@ -19,9 +19,10 @@ public class Course {
 <span class="nc" id="L19">        students = 0;</span>
 <span class="nc" id="L20">    }</span>
 
-    private void cancel() {
+    private boolean cancel() {
 <span class="nc" id="L23">        studentsEnrrolled = new ArrayList&lt;Student&gt;();</span>
 <span class="nc" id="L24">        students = 0;</span>
-<span class="nc" id="L25">    }</span>
+<span class="nc" id="L25">        return true;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
