@@ -13,7 +13,7 @@ public class AppTest {
      */
 	UniversityManager test;
 	
-	@Test
+	@BeforeEach
     public void testApp() {
         test = new UniversityManager();
     }
@@ -25,6 +25,11 @@ public class AppTest {
 	
 	@Test
 	public void test2(){
+		
+	}
+	
+	@Test
+	public void test3(){
 		
 	}
 }
