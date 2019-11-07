@@ -54,7 +54,7 @@ public class UniversityManager {
     }
 
 
-    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException {
+    public void addStudentToCourse(Student student, Course course) throws Exception, CourseNotFoundException, StudentNotFoundException, CourseFullException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
         if (!studentSet.contains(student)) throw new StudentNotFoundException();
 
