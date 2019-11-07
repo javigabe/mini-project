@@ -41,7 +41,9 @@ public class AppTest {
 			test.registerStudent(stud);
 			test.addStudentToCourse(stud, course);
 		}
-		Assertions.assertThrows(Exception.class, () -> {test.addStudentToCourse(new Student(54, "explota", "explota@email.com"), course);});
+		Student stud = new Student(54, "explota", "explota@email.com");
+
+		Assertions.assertThrows(Exception.class, () -> {test.addStudentToCourse(stud, course);});
 	}
 
 	@Test
