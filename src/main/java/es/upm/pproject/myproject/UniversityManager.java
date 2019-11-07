@@ -42,7 +42,7 @@ public class UniversityManager {
 
 
     // Method to register a course
-    public void registerCourse(int cod, String name, String coord) {
+    public void registerCourse(int cod, String name, String coord) throws Exception {
         new Course(cod, name, coord);
     }
 
@@ -59,8 +59,10 @@ public class UniversityManager {
         String studentName;
         String studentEmail;
 
-        public Student(int id, String name, String email) throws Exception {
-            if (!email.matches("*@*[^'.']")) throw new Exception();
+        public Student(Integer id, String name, String email) throws Exception {
+            if (name.length() == 0 || id == null) throw new Exception();
+            //if (!email.matches("*@*[^'.']")) throw new Exception();
+
             studentID = id;
             studentName = name;
             studentEmail = email;
@@ -95,7 +97,9 @@ public class UniversityManager {
         int students = 0;
         ArrayList<Student> studentsEnrrolled = new ArrayList<Student>();
 
-        public Course(int cod, String name, String coord) {
+        public Course(Integer cod, String name, String coord) throws Exception {
+            if (name.length() == 0 || coord.length() == 0 || cod == null) throw new Exception();
+
             code = cod;
             courseName = name;
             coordinator = coord;

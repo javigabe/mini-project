@@ -2,6 +2,7 @@ package es.upm.pproject.myproject;
 
 import org.junit.jupiter.api.*;
 
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -32,7 +33,37 @@ public class AppTest {
 	}
 	
 	@Test
-	public void test3(){
-		
+	public void test3() throws Exception {
+		/*test.registerCourse(1, "lengua", "pepe");
+
+		UniversityManager.Course course = test.courseSet.iterator().next();
+
+		for (int i = 0; i < 50; i++) {
+			test.registerStudent(i, "pepe", "@");
+		}
+
+
+		for (UniversityManager.Student student: test.studentSet) {
+			student.addCourse(course);
+		}
+
+		UniversityManager.Student student = null;
+
+		test.registerStudent(52, "paco", "@");
+		Iterator it = test.studentSet.iterator();
+
+		while (it.hasNext()) {
+			 student = (UniversityManager.Student) it.next();
+		}
+
+		UniversityManager.Student finalStudent = student;
+		Assertions.assertThrows(Exception.class, () -> {
+			finalStudent.addCourse(course);});*/
+
+	}
+
+	@Test
+	public void test4() throws Exception {
+		Assertions.assertThrows(Exception.class, () -> test.registerStudent(0,"", "paco@email"));
 	}
 }
