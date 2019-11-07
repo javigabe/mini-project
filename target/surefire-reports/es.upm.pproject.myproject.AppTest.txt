@@ -2,7 +2,11 @@
 Test set: es.upm.pproject.myproject.AppTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 s - in es.upm.pproject.myproject.AppTest
 =======
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s - in es.upm.pproject.myproject.AppTest
 >>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369
+=======
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 s - in es.upm.pproject.myproject.AppTest
+>>>>>>> 5df29a9a9276a1a6fbdc98d476c227bbd314dc40

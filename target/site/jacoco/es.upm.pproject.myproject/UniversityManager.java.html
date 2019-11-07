@@ -10,8 +10,8 @@ import java.util.*;
 <span class="fc" id="L10">    Set&lt;Course&gt; courseSet = new HashSet&lt;&gt;();</span>
 
     // Method to register a course to the UniversityManager
-    public void registerCourse(Course course) throws Exception {
-<span class="nc bnc" id="L14" title="All 2 branches missed.">        if (course == null) throw new Exception();</span>
+    public void registerCourse(Course course) throws CourseNotFoundException {
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        if (course == null) throw new CourseNotFoundException();</span>
 <span class="nc" id="L15">        else courseSet.add(course);</span>
 <span class="nc" id="L16">    }</span>
 
@@ -24,7 +24,7 @@ import java.util.*;
 
 
     // Method that returns all the students in a course sorted
-    public ArrayList&lt;Student&gt; matriculatedStudents(Integer code) throws Exception {
+    public ArrayList&lt;Student&gt; matriculatedStudents(Integer code) throws CourseNotFoundException {
 <span class="nc" id="L28">        Course myCourse = null;</span>
 
         // Pick the course with code &quot;code&quot;
@@ -34,7 +34,7 @@ import java.util.*;
 <span class="nc" id="L34">                break;</span>
             }
 <span class="nc" id="L36">        }</span>
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (myCourse == null) throw new Exception();</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (myCourse == null) throw new CourseNotFoundException();</span>
 <span class="nc" id="L38">        sort(myCourse.studentsEnrrolled, studComparator);</span>
 <span class="nc" id="L39">        return myCourse.studentsEnrrolled;</span>
     }
@@ -55,36 +55,37 @@ import java.util.*;
 <span class="nc" id="L55"></span>
 <span class="nc" id="L56"></span>
     public void addStudentToCourse(Student student, Course course) throws Exception {
-<span class="nc bnc" id="L58" title="All 6 branches missed.">        if (!courseSet.contains(course) || !studentSet.contains(student)) throw new Exception();</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed."></span>
-<span class="nc bnc" id="L60" title="All 4 branches missed.">        if (course.students &lt; 50) {</span>
-<span class="nc bnc" id="L61" title="All 2 branches missed.">            if (!course.studentsEnrrolled.contains(student)) {</span>
-<span class="nc" id="L62">                course.studentsEnrrolled.add(student);</span>
-<span class="nc" id="L63">                course.students++;</span>
-<span class="nc" id="L64">            }</span>
-<span class="nc" id="L65">            else throw new Exception();</span>
-<span class="nc" id="L66">        }</span>
-<span class="nc" id="L67">        else throw new Exception();</span>
-
-<span class="nc" id="L69">    }</span>
-<span class="nc" id="L70"></span>
+<span class="nc bnc" id="L58" title="All 4 branches missed.">        if (!courseSet.contains(course)) throw new CourseNotFoundException();</span>
+<span class="nc bnc" id="L59" title="All 4 branches missed.">        if (!studentSet.contains(student)) throw new StudentNotFoundException();</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed."></span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">        if (course.students &lt; 50) {</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">            if (!course.studentsEnrrolled.contains(student)) {</span>
+<span class="nc" id="L63">                course.studentsEnrrolled.add(student);</span>
+<span class="nc" id="L64">                course.students++;</span>
+            }
+<span class="nc" id="L66">            else throw new Exception();</span>
+<span class="nc" id="L67">        }</span>
+<span class="nc" id="L68">        else throw new Exception();</span>
+<span class="nc" id="L69"></span>
+<span class="nc" id="L70">    }</span>
 <span class="nc" id="L71"></span>
+
     // Auxiliar methods
 
     private void sort(ArrayList list, Comparator comp) {
-<span class="nc" id="L75">        Collections.sort(list, comp);</span>
-<span class="nc" id="L76">    }</span>
-
-<span class="pc" id="L78">    private Comparator&lt;Student&gt; studComparator = new Comparator&lt;Student&gt;() {</span>
-<span class="nc" id="L79">        public int compare(Student s1, Student s2) {</span>
-<span class="nc" id="L80">            return s1.studentID-s2.studentID;</span>
-<span class="nc bnc" id="L81" title="All 6 branches missed.">        }</span>
-<span class="nc" id="L82">    };</span>
-<span class="nc" id="L83"></span>
-<span class="pc" id="L84">    private Comparator&lt;Course&gt; courseComparator = new Comparator&lt;Course&gt;() {</span>
-<span class="nc" id="L85">        public int compare(Course s1, Course s2) {</span>
-<span class="nc" id="L86">            return s1.code-s2.code;</span>
-        }
-<span class="nc" id="L88">    };</span>
-<span class="nc" id="L89">}</span>
+<span class="nc" id="L76">        Collections.sort(list, comp);</span>
+<span class="nc" id="L77">    }</span>
+<span class="nc" id="L78"></span>
+<span class="pc" id="L79">    private Comparator&lt;Student&gt; studComparator = new Comparator&lt;Student&gt;() {</span>
+<span class="nc" id="L80">        public int compare(Student s1, Student s2) {</span>
+<span class="nc bnc" id="L81" title="All 6 branches missed.">            return s1.studentID-s2.studentID;</span>
+<span class="nc" id="L82">        }</span>
+<span class="nc" id="L83">    };</span>
+<span class="nc" id="L84"></span>
+<span class="pc" id="L85">    private Comparator&lt;Course&gt; courseComparator = new Comparator&lt;Course&gt;() {</span>
+<span class="nc" id="L86">        public int compare(Course s1, Course s2) {</span>
+<span class="nc" id="L87">            return s1.code-s2.code;</span>
+<span class="nc" id="L88">        }</span>
+<span class="nc" id="L89">    };</span>
+<span class="nc" id="L90">}</span>
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

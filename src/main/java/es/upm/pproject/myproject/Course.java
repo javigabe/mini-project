@@ -10,7 +10,7 @@ public class Course {
     int students;
     ArrayList<Student> studentsEnrrolled = new ArrayList<>();
 
-    public Course(Integer cod, String name, String coord) throws Exception {
+    public Course(Integer cod, String name, String coord) throws DataNotFilledException {
         if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();
 
         code = cod;

@@ -11,7 +11,7 @@ public class Course {
 <span class="nc" id="L11">    ArrayList&lt;Student&gt; studentsEnrrolled = new ArrayList&lt;&gt;();</span>
 
 <span class="nc" id="L13">    public Course(Integer cod, String name, String coord) throws Exception {</span>
-<span class="nc bnc" id="L14" title="All 6 branches missed.">        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new Exception();</span>
+<span class="nc bnc" id="L14" title="All 6 branches missed.">        if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();</span>
 
 <span class="nc" id="L16">        code = cod;</span>
 <span class="nc" id="L17">        courseName = name;</span>

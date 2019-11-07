@@ -6,9 +6,9 @@ public class Student {
     String studentName;
     String studentEmail;
 
-<span class="fc" id="L9">    public Student(Integer id, String name, String email) throws Exception {</span>
-<span class="pc bpc" id="L10" title="3 of 4 branches missed.">        if (name.length() == 0 || id == null) throw new Exception();</span>
-<span class="nc bnc" id="L11" title="All 2 branches missed.">        if (check(email)) throw new Exception();</span>
+<span class="fc" id="L9">    public Student(Integer id, String name, String email) throws InvalidEmailException, DataNotFilledException {</span>
+<span class="pc bpc" id="L10" title="3 of 4 branches missed.">        if (name.length() == 0 || id == null) throw new DataNotFilledException();</span>
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if (!check(email)) throw new InvalidEmailException();</span>
 
 <span class="nc" id="L13">        studentID = id;</span>
 <span class="nc" id="L14">        studentName = name;</span>

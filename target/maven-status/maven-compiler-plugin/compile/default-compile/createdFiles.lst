@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 es\upm\pproject\myproject\UniversityManager$2.class
 es\upm\pproject\myproject\Course.class
 es\upm\pproject\myproject\UniversityManager.class
 es\upm\pproject\myproject\Student.class
 es\upm\pproject\myproject\UniversityManager$1.class
 =======
+=======
+es/upm/pproject/myproject/StudentNotFoundException.class
+es/upm/pproject/myproject/CourseNotFoundException.class
+>>>>>>> 5df29a9a9276a1a6fbdc98d476c227bbd314dc40
 es/upm/pproject/myproject/UniversityManager$1.class
+es/upm/pproject/myproject/DataNotFilledException.class
 es/upm/pproject/myproject/UniversityManager$2.class
 es/upm/pproject/myproject/Student.class
 es/upm/pproject/myproject/UniversityManager.class
+es/upm/pproject/myproject/InvalidEmailException.class
 es/upm/pproject/myproject/Course.class
 >>>>>>> e1bf2a45a5616e928c53b7c80a2c98bb7f899369
