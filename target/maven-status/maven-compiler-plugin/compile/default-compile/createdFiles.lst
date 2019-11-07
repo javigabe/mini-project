@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 es\upm\pproject\myproject\UniversityManager$2.class
 es\upm\pproject\myproject\Course.class
 es\upm\pproject\myproject\UniversityManager.class
@@ -7,6 +8,9 @@ es\upm\pproject\myproject\Student.class
 es\upm\pproject\myproject\UniversityManager$1.class
 =======
 =======
+=======
+es/upm/pproject/myproject/CourseFullException.class
+>>>>>>> 7beec7db97b11c30528eda9590a0dbfc4fd61c50
 es/upm/pproject/myproject/StudentNotFoundException.class
 es/upm/pproject/myproject/CourseNotFoundException.class
 >>>>>>> 5df29a9a9276a1a6fbdc98d476c227bbd314dc40
