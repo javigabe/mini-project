@@ -17,8 +17,8 @@ public class UniversityManager {
 
 
     // Method to register a student to the UniversityManager
-    public void registerStudent(Student student) throws Exception {
-      if (student == null) throw new Exception();
+    public void registerStudent(Student student) throws StudentNotFoundException {
+      if (student == null) throw new StudentNotFoundException();
       else studentSet.add(student);
     }
 

@@ -1,8 +1,12 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager,135,25,18,0,31,5,16,1,7,1
+Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager,139,25,18,0,32,5,16,1,7,1
 Mini-project Programming Project,es.upm.pproject.myproject,Student,67,9,13,1,14,2,9,1,2,1
 Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.new Comparator() {...},8,6,0,0,1,1,1,1,1,1
+Mini-project Programming Project,es.upm.pproject.myproject,DataNotFilledException,0,3,0,0,0,1,0,1,0,1
+Mini-project Programming Project,es.upm.pproject.myproject,StudentNotFoundException,3,0,0,0,1,0,1,0,1,0
+Mini-project Programming Project,es.upm.pproject.myproject,CourseNotFoundException,3,0,0,0,1,0,1,0,1,0
 Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.new Comparator() {...},6,6,0,0,1,1,1,1,1,1
 Mini-project Programming Project,es.upm.pproject.myproject,Course,42,0,6,0,11,0,5,0,2,0
+Mini-project Programming Project,es.upm.pproject.myproject,InvalidEmailException,3,0,0,0,1,0,1,0,1,0
 Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.Course,49,0,6,0,12,0,5,0,2,0
 Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.Student,81,0,10,0,18,0,8,0,3,0
