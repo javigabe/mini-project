@@ -19,8 +19,9 @@ public class Course {
         students = 0;
     }
 
-    private void cancel() {
+    private boolean cancel() {
         studentsEnrrolled = new ArrayList<Student>();
         students = 0;
+        return true;
     }
 }
