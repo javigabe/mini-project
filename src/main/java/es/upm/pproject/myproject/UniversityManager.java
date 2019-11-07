@@ -5,8 +5,6 @@ import java.util.*;
 public class UniversityManager {
 
     // Manager for a university
-    public UniversityManager() {
-    }
 
     Set<Student> studentSet = new HashSet<>();
     Set<Course> courseSet = new HashSet<>();
@@ -14,14 +12,14 @@ public class UniversityManager {
     // Method to register a course to the UniversityManager
     public void registerCourse(Course course) throws Exception {
         if (course == null) throw new Exception();
-        courseSet.add(course);
+        else courseSet.add(course);
     }
 
 
     // Method to register a student to the UniversityManager
     public void registerStudent(Student student) throws Exception {
       if (student == null) throw new Exception();
-        studentSet.add(student);
+      else studentSet.add(student);
     }
 
 
