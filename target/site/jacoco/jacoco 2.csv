@@ -1,6 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager,67,15,6,0,16,3,7,1,4,1
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.new Comparator() {...},8,6,0,0,1,2,1,1,1,1
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.new Comparator() {...},6,6,0,0,1,2,1,1,1,1
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.Course,38,0,0,0,11,0,2,0,2,0
-Mini-project Programming Project,es.upm.pproject.myproject,UniversityManager.Student,80,0,8,0,19,0,7,0,3,0
