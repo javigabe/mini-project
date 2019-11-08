@@ -8,7 +8,8 @@
 
 ## **Instrucciones**
 
-Para ejecutar todos los test ejecutar el comando "mvn test".
+Para ejecutar todos los test hay que tener instalada la herramienta Maven y ejecutar el comando "mvn test".
+y algo
 
 ## **Contenido src/main**
 - UniversityManager: implementa la interfaz UniversityManagerInterface. En este fichero se implementa toda la
