@@ -74,7 +74,7 @@ public class UniversityManager {
         sort(myCourse.studentsEnrolled, studComparator);
         return myCourse.studentsEnrolled;
     }
-
+    // Methot that empty a course
     public void cancelCourse(Course course) throws CourseNotFoundException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
 

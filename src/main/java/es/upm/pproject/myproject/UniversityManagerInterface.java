@@ -3,6 +3,7 @@ package es.upm.pproject.myproject;
 import java.util.List;
 
 public interface UniversityManagerInterface {
+	
 	//Registers a student in the system and checks if student is not null
 	public void registerStudent(Student student) throws StudentNotFoundException, StudentAlreadyInManagerException;
 	
