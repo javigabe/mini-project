@@ -15,12 +15,6 @@ public class Student {
         studentEmail = email;
     }
 
-    public boolean cancelCourse(Course course) {
-        course.studentsEnrrolled.remove(this);
-        course.students--;
-        return true;
-    }
-
     private boolean check(String email) {
 		boolean containsArr = false;
 

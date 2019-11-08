@@ -86,7 +86,7 @@ public class AppTest {
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student);
 		test.addStudentToCourse(student, course);
-		Assertions.assertTrue(student.cancelCourse(course));
+		Assertions.assertFalse(course.studentsEnrrolled.contains(student));
 	}
 
 	@Test

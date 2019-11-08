@@ -69,6 +69,14 @@ public class UniversityManager {
 
     }
 
+    public void removeStudentFromCourse(Course course, Student student) throws CourseNotFoundException, StudentNotFoundException {
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+        if (!studentSet.contains(student) || !course.studentsEnrrolled.contains(student)) throw new StudentNotFoundException();
+
+        course.studentsEnrrolled.remove(student);
+        course.students--;
+    }
+
 
     // Auxiliar methods
 
