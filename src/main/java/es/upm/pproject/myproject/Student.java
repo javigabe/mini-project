@@ -2,7 +2,7 @@ package es.upm.pproject.myproject;
 
 public class Student {
 
-    int studentID;
+    Integer studentID;
     String studentName;
     String studentEmail;
 

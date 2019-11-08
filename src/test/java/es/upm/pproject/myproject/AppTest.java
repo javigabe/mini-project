@@ -207,6 +207,12 @@ public class AppTest {
 
 	@Test
 	public void test19() throws Exception {
-		Assertions
+		Assertions.assertThrows(CourseNotFoundException.class, () -> {test.cancelCourse(new Course(1, "course", "coord"));});
+	}
+
+	@Test
+	public void test20() throws Exception {
+		Course course = new Course(1, "Programming project", "Guillermo Roman");
+
 	}
 }

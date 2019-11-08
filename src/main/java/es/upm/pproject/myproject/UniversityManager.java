@@ -12,9 +12,14 @@ public class UniversityManager {
     //*********  METHODS OF THE STUDENTS  *********//
 
     // Method to register a student to the UniversityManager
-    public void registerStudent(Student student) throws StudentNotFoundException {
+    public void registerStudent(Student student) throws StudentNotFoundException, StudentAlreadyInManagerException {
         if (student == null) throw new StudentNotFoundException();
-        else studentSet.add(student);
+        else {
+            for (Student student1: studentSet) {
+                if (student1.studentID.equals(student.studentID)) throw new StudentAlreadyInManagerException();
+            }
+            studentSet.add(student);
+        }
     }
 
     // Method to add a student to a course
@@ -44,9 +49,14 @@ public class UniversityManager {
     //*********  METHODS OF THE COURSES  *********//
 
     // Method to register a course to the UniversityManager
-    public void registerCourse(Course course) throws CourseNotFoundException {
+    public void registerCourse(Course course) throws CourseNotFoundException, CourseAlreadyInManagerException {
         if (course == null) throw new CourseNotFoundException();
-        else courseSet.add(course);
+        else {
+            for (Course course1: courseSet) {
+                if (course1.code.equals(course.code)) throw new CourseAlreadyInManagerException();
+            }
+            courseSet.add(course);
+        }
     }
 
     // Method that returns all the students in a course sorted
