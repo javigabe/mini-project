@@ -8,7 +8,7 @@ public class Course {
     String courseName;
     String coordinator;
     int students;
-    ArrayList<Student> studentsEnrrolled = new ArrayList<>();
+    ArrayList<Student> studentsEnrolled = new ArrayList<>();
 
     public Course(Integer cod, String name, String coord) throws DataNotFilledException {
         if (name.length() == 0 || coord.length() == 0 || cod == null) throw new DataNotFilledException();

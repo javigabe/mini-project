@@ -28,8 +28,8 @@ public class UniversityManager {
         if (!studentSet.contains(student)) throw new StudentNotFoundException();
 
         if (course.students < 50) {
-            if (!course.studentsEnrrolled.contains(student)) {
-                course.studentsEnrrolled.add(student);
+            if (!course.studentsEnrolled.contains(student)) {
+                course.studentsEnrolled.add(student);
                 course.students++;
             }
             else throw new StudentInCourseException();
@@ -40,9 +40,9 @@ public class UniversityManager {
     // Method to remove a student from a course
     public void removeStudentFromCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
-        if (!studentSet.contains(student) || !course.studentsEnrrolled.contains(student)) throw new StudentNotFoundException();
+        if (!studentSet.contains(student) || !course.studentsEnrolled.contains(student)) throw new StudentNotFoundException();
 
-        course.studentsEnrrolled.remove(student);
+        course.studentsEnrolled.remove(student);
         course.students--;
     }
 
@@ -71,14 +71,14 @@ public class UniversityManager {
             }
         }
         if (myCourse == null) throw new CourseNotFoundException();
-        sort(myCourse.studentsEnrrolled, studComparator);
-        return myCourse.studentsEnrrolled;
+        sort(myCourse.studentsEnrolled, studComparator);
+        return myCourse.studentsEnrolled;
     }
 
     public void cancelCourse(Course course) throws CourseNotFoundException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
 
-        course.studentsEnrrolled = new ArrayList<>();
+        course.studentsEnrolled = new ArrayList<>();
         course.students = 0;
     }
 

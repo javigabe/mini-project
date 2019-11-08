@@ -96,7 +96,7 @@ public class AppTest {
 		test.registerStudent(student);
 		test.addStudentToCourse(student, course);
 		test.removeStudentFromCourse(student, course);
-		Assertions.assertFalse(course.studentsEnrrolled.contains(student));
+		Assertions.assertFalse(course.studentsEnrolled.contains(student));
 	}
 
 	@Test
@@ -107,7 +107,7 @@ public class AppTest {
 		test.registerStudent(student);
 		test.addStudentToCourse(student, course);
 		test.cancelCourse(course);
-		Assertions.assertEquals(new ArrayList<>(), course.studentsEnrrolled);
+		Assertions.assertEquals(new ArrayList<>(), course.studentsEnrolled);
 		Assertions.assertEquals(0, course.students);
 	}
 
@@ -128,14 +128,14 @@ public class AppTest {
 		test.registerStudent(student3);
 		test.addStudentToCourse(student3, course);
 
-		ArrayList<Student> studentsEnrrolled = new ArrayList<>();
-		studentsEnrrolled.add(student1);
-		studentsEnrrolled.add(student3);
-		studentsEnrrolled.add(student2);
+		ArrayList<Student> studentsEnrolled = new ArrayList<>();
+		studentsEnrolled.add(student1);
+		studentsEnrolled.add(student3);
+		studentsEnrolled.add(student2);
 
 		ArrayList<Student> sortStudents = (ArrayList<Student>) test.matriculatedStudents(5);
 
-		Assertions.assertEquals(studentsEnrrolled, sortStudents);
+		Assertions.assertEquals(studentsEnrolled, sortStudents);
 	}
 
 	@Test
@@ -154,14 +154,14 @@ public class AppTest {
 		Student student3 =  new Student(2, "Mario", "mario@email.es");
 		test.registerStudent(student3);
 
-		ArrayList<Student> studentsEnrrolled = new ArrayList<>();
-		studentsEnrrolled.add(student1);
-		studentsEnrrolled.add(student3);
-		studentsEnrrolled.add(student2);
+		ArrayList<Student> studentsEnrolled = new ArrayList<>();
+		studentsEnrolled.add(student1);
+		studentsEnrolled.add(student3);
+		studentsEnrolled.add(student2);
 
 		ArrayList<Student> sortStudents = (ArrayList<Student>) test.allUsersSorted();
 
-		Assertions.assertEquals(studentsEnrrolled, sortStudents);
+		Assertions.assertEquals(studentsEnrolled, sortStudents);
 	}
 
 	@Test
