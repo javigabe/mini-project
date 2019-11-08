@@ -1,4 +1,4 @@
-<h1><strong><center> Mini-Project  </center></strong></h1>
+<h1><strong><center> Mini-Project</center></strong></h1>
 
 
 
