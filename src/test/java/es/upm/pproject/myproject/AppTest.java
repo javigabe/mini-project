@@ -249,4 +249,16 @@ public class AppTest {
 		Assertions.assertEquals(orderedCourses, test.allCoursesSorted());
 
 	}
+
+	@Test
+	public void test23() throws Exception {
+		Course course = new Course(1, "Programming project", "Guillermo Roman");
+		Course course1 = new Course(2, "Subject", "Teacher");
+		Course course2 = new Course(3, "Other Subject", "Other teacher");
+
+		test.registerCourse(course1);
+		test.registerCourse(course2);
+
+		Assertions.assertThrows(CourseNotFoundException.class, () -> test.matriculatedStudents(1));
+	}
 }
