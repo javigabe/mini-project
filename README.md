@@ -1,3 +1,9 @@
+<h1> heading </h1>
+
+
+
+
+
 registerStudent: Registers a student in the system and checks if student is not null.
 addStudentToCourse: Registers a student in a course and checks if the student and the course are already in the system and if the course is full
 removeStudentFromCourse: Removes a student from a course and checks if the student and the course are already in the system and if the student is enrolled in 	that course
