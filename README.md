@@ -1,5 +1,4 @@
-<h1><strong><center> Mini-Project</center></strong></h1>
-
+# **Mini-Project**
 
 
 
