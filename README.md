@@ -9,10 +9,9 @@
 ## **Instrucciones**
 
 Para ejecutar todos los test hay que tener instalada la herramienta Maven y ejecutar el comando "mvn test".
-y algo
 
 ## **Contenido src/main**
-- **UniversityManager**: implementa la interfaz UniversityManagerInterface. En este fichero se implementa toda la
+- UniversityManager: implementa la interfaz UniversityManagerInterface. En este fichero se implementa toda la
   funcionalidad del proyecto con los metodos abajo descritos.
 
   * registerStudent: Registers a student in the system and checks if student is not null.
