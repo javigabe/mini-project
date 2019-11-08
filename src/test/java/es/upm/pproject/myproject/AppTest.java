@@ -47,10 +47,19 @@ public class AppTest {
 	@Test
 	public void test5() {
 		Assertions.assertThrows(DataNotFilledException.class, () -> new Student(null, "Alvaro", "alvaro@email.es"));
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Student(1, "", "alvaro@email.es"));
+		Assertions.assertThrows(InvalidEmailException.class, () -> new Student(2, "Alvaro", ""));
 	}
 
 	@Test
-	public void test6() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
+	public void test6() {
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Course(null, "Programming project", "Guillermo"));
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Course(1, "", "Guillermo"));
+		Assertions.assertThrows(DataNotFilledException.class, () -> new Course(1, "Programming Project", ""));
+	}
+
+	@Test
+	public void test7() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student);
 		Course course = new Course(21, "programming_project", "Guillermo");
@@ -58,7 +67,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test7() throws InvalidEmailException, DataNotFilledException, CourseNotFoundException {
+	public void test8() throws InvalidEmailException, DataNotFilledException, CourseNotFoundException {
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		Course course = new Course(21, "programming project", "Guillermo");
 		test.registerCourse(course);
@@ -66,7 +75,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test8() throws Exception {
+	public void test9() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		for (int i = 0; i < 50; i++) {
@@ -80,7 +89,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test9() throws Exception {
+	public void test10() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
@@ -91,7 +100,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test10() throws Exception {
+	public void test11() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
@@ -103,7 +112,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test11() throws Exception {
+	public void test12() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 
@@ -130,12 +139,12 @@ public class AppTest {
 	}
 
 	@Test
-	public void test12() throws DataNotFilledException {
+	public void test13() throws DataNotFilledException {
 		Assertions.assertThrows(CourseNotFoundException.class, () -> {test.matriculatedStudents(5);});
 	}
 
 	@Test
-	public void test13() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
+	public void test14() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
 		Student student1 =  new Student(1, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student1);
 
@@ -156,12 +165,29 @@ public class AppTest {
 	}
 
 	@Test
-	public void test14() {
+	public void test15() throws Exception {
+		Student student = new Student(1, "Javi", "javi@email.es");
+		Course course = new Course(10, "Programming Project", "Guillermo Roman");
 
+		test.registerCourse(course);
+		Assertions.assertThrows(StudentNotFoundException.class, () -> test.removeStudentFromCourse(student, course));
+
+		test.registerStudent(student);
+		Assertions.assertThrows(StudentNotFoundException.class, () -> test.removeStudentFromCourse(student, course));
 	}
 
 	@Test
-	public void test15() throws Exception {
+	public void test16() throws Exception {
+		Student student = new Student(1, "Javi", "javi@email.es");
+		Course course = new Course(10, "Programming Project", "Guillermo Roman");
+
+		test.registerStudent(student);
+
+		Assertions.assertThrows(CourseNotFoundException.class, () -> test.removeStudentFromCourse(student, course));
+	}
+
+	@Test
+	public void test17() throws Exception {
 		Student student = new Student(1, "Javi", "javi@email.es");
 		test.registerStudent(student);
 
@@ -171,5 +197,16 @@ public class AppTest {
 		test.addStudentToCourse(student, course);
 
 		Assertions.assertThrows(StudentInCourseException.class, () -> {test.addStudentToCourse(student, course);});
+	}
+
+	@Test
+	public void test18() throws Exception {
+		Assertions.assertThrows(CourseNotFoundException.class, () -> {test.registerCourse(null);});
+		Assertions.assertThrows(StudentNotFoundException.class, () ->{test.registerStudent(null);});
+	}
+
+	@Test
+	public void test19() throws Exception {
+		Assertions
 	}
 }

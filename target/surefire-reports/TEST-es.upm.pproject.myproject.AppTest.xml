@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.116" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.upm.pproject.myproject.AppTest" time="0.12" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/surefire 2019-11-08T14-21-24_981-jvmRun1 surefire832539906064476506tmp surefire_07547820802913668172tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/surefire 2019-11-08T15-16-57_445-jvmRun1 surefire645723952088245094tmp surefire_08156575615692663518tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="surefire.test.class.path" value="/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/test-classes:/Users/javigabe/Documents/universidad/programming proyect/mini-proyect/target/classes:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.2.0/junit-jupiter-engine-5.2.0.jar:/Users/javigabe/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/Users/javigabe/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/Users/javigabe/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.2.0/junit-jupiter-api-5.2.0.jar:/Users/javigabe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.2.0/junit-jupiter-params-5.2.0.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:/Users/javigabe/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,18 +61,22 @@
     <property name="java.class.version" value="52.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="test10" classname="es.upm.pproject.myproject.AppTest" time="0.053"/>
-  <testcase name="test11" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
-  <testcase name="test12" classname="es.upm.pproject.myproject.AppTest" time="0.004"/>
-  <testcase name="test13" classname="es.upm.pproject.myproject.AppTest" time="0"/>
-  <testcase name="test14" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test10" classname="es.upm.pproject.myproject.AppTest" time="0.043"/>
+  <testcase name="test11" classname="es.upm.pproject.myproject.AppTest" time="0.007"/>
+  <testcase name="test12" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
+  <testcase name="test13" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
+  <testcase name="test14" classname="es.upm.pproject.myproject.AppTest" time="0"/>
+  <testcase name="test15" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test16" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
+  <testcase name="test17" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
+  <testcase name="test18" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
   <testcase name="test1" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
   <testcase name="test2" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
-  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0.005"/>
-  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.004"/>
+  <testcase name="test3" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test4" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
   <testcase name="test5" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
-  <testcase name="test6" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
-  <testcase name="test7" classname="es.upm.pproject.myproject.AppTest" time="0.001"/>
-  <testcase name="test8" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test6" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
+  <testcase name="test7" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
+  <testcase name="test8" classname="es.upm.pproject.myproject.AppTest" time="0.003"/>
   <testcase name="test9" classname="es.upm.pproject.myproject.AppTest" time="0.002"/>
 </testsuite>
