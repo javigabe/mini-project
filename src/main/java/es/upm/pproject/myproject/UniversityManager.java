@@ -9,19 +9,45 @@ public class UniversityManager {
     Set<Student> studentSet = new HashSet<>();
     Set<Course> courseSet = new HashSet<>();
 
+    //*********  METHODS OF THE STUDENTS  *********//
+
+    // Method to register a student to the UniversityManager
+    public void registerStudent(Student student) throws StudentNotFoundException {
+        if (student == null) throw new StudentNotFoundException();
+        else studentSet.add(student);
+    }
+
+    // Method to add a student to a course
+    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException, StudentInCourseException {
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+        if (!studentSet.contains(student)) throw new StudentNotFoundException();
+
+        if (course.students < 50) {
+            if (!course.studentsEnrrolled.contains(student)) {
+                course.studentsEnrrolled.add(student);
+                course.students++;
+            }
+            else throw new StudentInCourseException();
+        }
+        else throw new CourseFullException();
+    }
+
+    // Method to remove a student from a course
+    public void removeStudentFromCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException {
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+        if (!studentSet.contains(student) || !course.studentsEnrrolled.contains(student)) throw new StudentNotFoundException();
+
+        course.studentsEnrrolled.remove(student);
+        course.students--;
+    }
+
+    //*********  METHODS OF THE COURSES  *********//
+
     // Method to register a course to the UniversityManager
     public void registerCourse(Course course) throws CourseNotFoundException {
         if (course == null) throw new CourseNotFoundException();
         else courseSet.add(course);
     }
-
-
-    // Method to register a student to the UniversityManager
-    public void registerStudent(Student student) throws StudentNotFoundException {
-      if (student == null) throw new StudentNotFoundException();
-      else studentSet.add(student);
-    }
-
 
     // Method that returns all the students in a course sorted
     public List<Student> matriculatedStudents(Integer code) throws CourseNotFoundException {
@@ -39,6 +65,16 @@ public class UniversityManager {
         return myCourse.studentsEnrrolled;
     }
 
+    public void cancelCourse(Course course) throws CourseNotFoundException {
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+
+        course.studentsEnrrolled = new ArrayList<>();
+        course.students = 0;
+    }
+
+
+    //*********  METHODS OF THE MANAGER  *********//
+
     // Method that return all the students sorted by a comparator
     public List<Student> allUsersSorted () {
         ArrayList<Student> studentArrayList = new ArrayList<>(studentSet);
@@ -51,37 +87,6 @@ public class UniversityManager {
         ArrayList<Course> courseArrayList = new ArrayList<>(courseSet);
         sort(courseArrayList, courseComparator);
         return courseArrayList;
-    }
-
-
-    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException, StudentInCourseException {
-        if (!courseSet.contains(course)) throw new CourseNotFoundException();
-        if (!studentSet.contains(student)) throw new StudentNotFoundException();
-
-        if (course.students < 50) {
-            if (!course.studentsEnrrolled.contains(student)) {
-                course.studentsEnrrolled.add(student);
-                course.students++;
-            }
-            else throw new StudentInCourseException();
-        }
-        else throw new CourseFullException();
-
-    }
-
-    public void removeStudentFromCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException {
-        if (!courseSet.contains(course)) throw new CourseNotFoundException();
-        if (!studentSet.contains(student) || !course.studentsEnrrolled.contains(student)) throw new StudentNotFoundException();
-
-        course.studentsEnrrolled.remove(student);
-        course.students--;
-    }
-
-    public void cancelCourse(Course course) throws CourseNotFoundException {
-        if (!courseSet.contains(course)) throw new CourseNotFoundException();
-
-        course.studentsEnrrolled = new ArrayList<>();
-        course.students = 0;
     }
 
 

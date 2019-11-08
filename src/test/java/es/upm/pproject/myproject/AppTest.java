@@ -91,17 +91,19 @@ public class AppTest {
 	}
 
 	@Test
-	public void test10() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException, StudentInCourseException {
+	public void test10() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student);
 		test.addStudentToCourse(student, course);
-		Assertions.assertTrue(course.cancel());
+		test.cancelCourse(course);
+		Assertions.assertEquals(new ArrayList<>(), course.studentsEnrrolled);
+		Assertions.assertEquals(0, course.students);
 	}
 
 	@Test
-	public void test11() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException, StudentInCourseException {
+	public void test11() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 
@@ -151,5 +153,23 @@ public class AppTest {
 		ArrayList<Student> sortStudents = (ArrayList<Student>) test.allUsersSorted();
 
 		Assertions.assertEquals(studentsEnrrolled, sortStudents);
+	}
+
+	@Test
+	public void test14() {
+
+	}
+
+	@Test
+	public void test15() throws Exception {
+		Student student = new Student(1, "Javi", "javi@email.es");
+		test.registerStudent(student);
+
+		Course course = new Course(10, "Programming Project", "Guillermo Roman");
+		test.registerCourse(course);
+
+		test.addStudentToCourse(student, course);
+
+		Assertions.assertThrows(StudentInCourseException.class, () -> {test.addStudentToCourse(student, course);});
 	}
 }
