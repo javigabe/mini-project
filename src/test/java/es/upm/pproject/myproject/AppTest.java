@@ -80,17 +80,18 @@ public class AppTest {
 	}
 
 	@Test
-	public void test9() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException {
+	public void test9() throws Exception {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student);
 		test.addStudentToCourse(student, course);
+		test.removeStudentFromCourse(student, course);
 		Assertions.assertFalse(course.studentsEnrrolled.contains(student));
 	}
 
 	@Test
-	public void test10() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException{
+	public void test10() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException, StudentInCourseException {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
@@ -100,7 +101,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test11() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException {
+	public void test11() throws DataNotFilledException, CourseNotFoundException, InvalidEmailException, StudentNotFoundException, CourseFullException, StudentInCourseException {
 		Course course = new Course(5, "programming project", "Guillermo");
 		test.registerCourse(course);
 

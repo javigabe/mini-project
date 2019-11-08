@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: es.upm.pproject.myproject.AppTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.181 s <<< FAILURE! - in es.upm.pproject.myproject.AppTest
-test9  Time elapsed: 0.038 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at es.upm.pproject.myproject.AppTest.test9(AppTest.java:89)
-
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 s - in es.upm.pproject.myproject.AppTest

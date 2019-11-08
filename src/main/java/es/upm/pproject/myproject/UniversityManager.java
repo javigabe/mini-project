@@ -54,7 +54,7 @@ public class UniversityManager {
     }
 
 
-    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException {
+    public void addStudentToCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException, CourseFullException, StudentInCourseException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
         if (!studentSet.contains(student)) throw new StudentNotFoundException();
 
@@ -63,18 +63,25 @@ public class UniversityManager {
                 course.studentsEnrrolled.add(student);
                 course.students++;
             }
-            else throw new StudentNotFoundException();
+            else throw new StudentInCourseException();
         }
         else throw new CourseFullException();
 
     }
 
-    public void removeStudentFromCourse(Course course, Student student) throws CourseNotFoundException, StudentNotFoundException {
+    public void removeStudentFromCourse(Student student, Course course) throws CourseNotFoundException, StudentNotFoundException {
         if (!courseSet.contains(course)) throw new CourseNotFoundException();
         if (!studentSet.contains(student) || !course.studentsEnrrolled.contains(student)) throw new StudentNotFoundException();
 
         course.studentsEnrrolled.remove(student);
         course.students--;
+    }
+
+    public void cancelCourse(Course course) throws CourseNotFoundException {
+        if (!courseSet.contains(course)) throw new CourseNotFoundException();
+
+        course.studentsEnrrolled = new ArrayList<>();
+        course.students = 0;
     }
 
 

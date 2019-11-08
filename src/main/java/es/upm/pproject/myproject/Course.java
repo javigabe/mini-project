@@ -18,10 +18,4 @@ public class Course {
         coordinator = coord;
         students = 0;
     }
-
-    public boolean cancel() {
-        studentsEnrrolled = new ArrayList<>();
-        students = 0;
-        return true;
-    }
 }
