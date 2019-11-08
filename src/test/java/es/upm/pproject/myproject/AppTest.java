@@ -59,7 +59,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test7() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
+	public void test7() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException, StudentAlreadyInManagerException {
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student);
 		Course course = new Course(21, "programming_project", "Guillermo");
@@ -67,7 +67,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test8() throws InvalidEmailException, DataNotFilledException, CourseNotFoundException {
+	public void test8() throws InvalidEmailException, DataNotFilledException, CourseNotFoundException, CourseAlreadyInManagerException {
 		Student student =  new Student(10, "Alvaro", "alvaro@email.es");
 		Course course = new Course(21, "programming project", "Guillermo");
 		test.registerCourse(course);
@@ -144,7 +144,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void test14() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException {
+	public void test14() throws InvalidEmailException, DataNotFilledException, StudentNotFoundException, StudentAlreadyInManagerException {
 		Student student1 =  new Student(1, "Alvaro", "alvaro@email.es");
 		test.registerStudent(student1);
 
@@ -213,6 +213,40 @@ public class AppTest {
 	@Test
 	public void test20() throws Exception {
 		Course course = new Course(1, "Programming project", "Guillermo Roman");
+		Course course1 = new Course(1, "Subject", "Teacher");
+
+		test.registerCourse(course);
+
+		Assertions.assertThrows(CourseAlreadyInManagerException.class, () -> test.registerCourse(course1));
+	}
+
+	@Test
+	public void test21() throws Exception {
+		Student student1 =  new Student(1, "Alvaro", "alvaro@email.es");
+		Student student2 =  new Student(1, "Javier", "javier@email.es");
+
+		test.registerStudent(student1);
+
+		Assertions.assertThrows(StudentAlreadyInManagerException.class, () -> test.registerStudent(student2));
+	}
+
+	@Test
+	public void test22() throws Exception {
+		Course course = new Course(1, "Programming project", "Guillermo Roman");
+		Course course1 = new Course(2, "Subject", "Teacher");
+		Course course2 = new Course(3, "Other Subject", "Other teacher");
+
+		test.registerCourse(course1);
+		test.registerCourse(course2);
+		test.registerCourse(course);
+
+		ArrayList<Course> orderedCourses = new ArrayList<>();
+
+		orderedCourses.add(0, course);
+		orderedCourses.add(1, course1);
+		orderedCourses.add(2, course2);
+
+		Assertions.assertEquals(orderedCourses, test.allCoursesSorted());
 
 	}
 }
