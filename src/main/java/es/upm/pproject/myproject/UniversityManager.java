@@ -2,7 +2,7 @@ package es.upm.pproject.myproject;
 
 import java.util.*;
 
-public class UniversityManager {
+public class UniversityManager implements UniversityManagerInterface {
 
     // Manager for a university
 
