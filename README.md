@@ -15,10 +15,14 @@ y algo
 - UniversityManager: implementa la interfaz UniversityManagerInterface. En este fichero se implementa toda la
   funcionalidad del proyecto con los metodos abajo descritos.
 
-registerStudent: Registers a student in the system and checks if student is not null.'\n'
+  registerStudent: Registers a student in the system and checks if the student is not null.
+  addStudentToCourse: Registers a student in a course and checks if the student and the course are already in the system and if the course is full.
+  removeStudentFromCourse: Removes a student from a course and checks if the student and the course are already in the system and if the student is enrolled in that course.
+
+registerStudent: Registers a student in the system and checks if student is not null.
 addStudentToCourse: Registers a student in a course and checks if the student and the course are already in the system and if the course is full.
 removeStudentFromCourse: Removes a student from a course and checks if the student and the course are already in the system and if the student is enrolled in that course.
-registerCourse: Registers a course in the system and checks if the course is not null. 
+registerCourse: Registers a course in the system and checks if the course is not null.
 matriculatedStudent: Returns all the students in a course sorted by the ID, it checks if the course is registered.
 cancelCourse: Empty the course if it exists.
 allUsersSorted: Returns all the registered students sorted by ID.
