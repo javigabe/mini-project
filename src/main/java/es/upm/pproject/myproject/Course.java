@@ -19,7 +19,7 @@ public class Course {
         students = 0;
     }
 
-    private boolean cancel() {
+    public boolean cancel() {
         studentsEnrrolled = new ArrayList<>();
         students = 0;
         return true;
