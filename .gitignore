@@ -4,9 +4,4 @@
 /.idea/*
 /.idea/*.*
 .proyect
-/bin
-.settings
-.classpath
-.project
-target/*
-/target/
+target
